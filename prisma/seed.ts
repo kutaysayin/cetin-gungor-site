@@ -1,22 +1,10 @@
 import { PrismaClient } from "../src/generated/prisma";
-import { PrismaLibSql } from "@prisma/adapter-libsql";
-import * as path from "path";
+import { PrismaPg } from "@prisma/adapter-pg";
 import { hash } from "bcryptjs";
 
-const DATABASE_URL = process.env.DATABASE_URL ?? "file:./dev.db";
-
-// Convert relative file path to absolute for @libsql/client compatibility
-function resolveLibsqlUrl(url: string): string {
-  if (url.startsWith("file:")) {
-    const filePart = url.slice("file:".length);
-    const absolutePath = path.resolve(filePart);
-    return `file:${absolutePath}`;
-  }
-  return url;
-}
-
-const adapter = new PrismaLibSql({ url: resolveLibsqlUrl(DATABASE_URL) });
-const prisma = new PrismaClient({ adapter });
+const url = process.env.DIRECT_DATABASE_URL || process.env.DATABASE_URL;
+const adapter = new PrismaPg({ connectionString: url });
+const prisma = new PrismaClient({ adapter }) as unknown as PrismaClient;
 
 async function main() {
   console.log("Tohum verisi yukleniyor...");
