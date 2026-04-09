@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "prisma-local": {
+      "command": "cmd",
+      "args": ["/c", "npx", "-y", "prisma", "mcp"]
+    },
+    "a11y": {
+      "command": "cmd",
+      "args": ["/c", "npx", "-y", "a11y-mcp-server"]
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "Cetin Gungor - Manisa Insaat Malzemecileri Dernegi",
+  "short_name": "Cetin Gungor",
+  "description": "Manisa Insaat Malzemecileri Dernegi Resmi Web Sitesi",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a2744",
+  "theme_color": "#1a2744",
+  "orientation": "portrait-primary",
+  "icons": [
+    { "src": "/icons/icon.svg", "sizes": "any", "type": "image/svg+xml" },
+    { "src": "/icons/icon.svg", "sizes": "512x512", "type": "image/svg+xml", "purpose": "maskable" }
+  ]
+}

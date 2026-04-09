@@ -1,0 +1,193 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model SiteSettings {
+  id          String   @id @default(cuid())
+  name        String
+  description String?
+  address     String?
+  phone       String?
+  email       String?
+  socialMedia String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model News {
+  id          String   @id @default(cuid())
+  title       String
+  slug        String   @unique
+  content     String
+  excerpt     String
+  image       String?
+  category    String
+  featured    Boolean  @default(false)
+  publishedAt DateTime @default(now())
+  authorName  String?
+  viewCount   Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model BoardMember {
+  id       String  @id @default(cuid())
+  name     String
+  title    String
+  company  String?
+  image    String?
+  bio      String?
+  order    Int     @default(0)
+  period   String?
+  active   Boolean @default(true)
+}
+
+model Event {
+  id            String              @id @default(cuid())
+  title         String
+  slug          String              @unique
+  description   String
+  date          DateTime
+  endDate       DateTime?
+  location      String?
+  image         String?
+  capacity      Int?
+  fee           Float?
+  createdAt     DateTime            @default(now())
+  updatedAt     DateTime            @updatedAt
+  registrations EventRegistration[]
+}
+
+model WorkGroup {
+  id          String  @id @default(cuid())
+  name        String
+  description String?
+  members     String?
+  order       Int     @default(0)
+}
+
+model MemberCompany {
+  id        String   @id @default(cuid())
+  name      String
+  owner     String?
+  sector    String?
+  address   String?
+  phone     String?
+  email     String?
+  website   String?
+  image     String?
+  active    Boolean  @default(true)
+  createdAt DateTime @default(now())
+}
+
+model Publication {
+  id          String   @id @default(cuid())
+  title       String
+  type        String
+  description String?
+  coverImage  String?
+  fileUrl     String?
+  issueNumber Int?
+  publishedAt DateTime @default(now())
+}
+
+model GalleryAlbum {
+  id          String         @id @default(cuid())
+  title       String
+  slug        String         @unique
+  description String?
+  coverImage  String?
+  date        DateTime       @default(now())
+  photos      GalleryPhoto[]
+  createdAt   DateTime       @default(now())
+}
+
+model GalleryPhoto {
+  id       String       @id @default(cuid())
+  albumId  String
+  album    GalleryAlbum @relation(fields: [albumId], references: [id])
+  url      String
+  caption  String?
+  order    Int          @default(0)
+}
+
+model Advantage {
+  id          String  @id @default(cuid())
+  companyName String
+  description String
+  category    String
+  discount    String?
+  contact     String?
+  active      Boolean @default(true)
+}
+
+model User {
+  id             String    @id @default(cuid())
+  email          String    @unique
+  password       String
+  name           String
+  role           String    @default("MEMBER")
+  companyName    String?
+  phone          String?
+  avatar         String?
+  memberSince    DateTime  @default(now())
+  duesStatus     String    @default("BEKLEMEDE")
+  lastDuesDate   DateTime?
+  bio            String?
+  sector         String?
+  address        String?
+  active         Boolean   @default(true)
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+  eventRegistrations EventRegistration[]
+  payments           Payment[]
+}
+
+model EventRegistration {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+  eventId   String
+  event     Event    @relation(fields: [eventId], references: [id])
+  status    String   @default("ONAYLANDI")
+  createdAt DateTime @default(now())
+  @@unique([userId, eventId])
+}
+
+model Payment {
+  id            String    @id @default(cuid())
+  userId        String
+  user          User      @relation(fields: [userId], references: [id])
+  amount        Float
+  description   String
+  type          String
+  status        String    @default("BEKLEMEDE")
+  paymentMethod String?
+  transactionId String?
+  paidAt        DateTime?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+}
+
+model Newsletter {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String?
+  active    Boolean  @default(true)
+  createdAt DateTime @default(now())
+}
+
+model ContactMessage {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  subject   String
+  message   String
+  read      Boolean  @default(false)
+  createdAt DateTime @default(now())
+}
