@@ -1,9 +1,9 @@
-/* Middleware — portal ve admin route'larini korur */
+/* Proxy — portal ve admin route'larini korur (Next.js 16) */
 import { withAuth } from "next-auth/middleware";
 import { NextResponse } from "next/server";
 
-export default withAuth(
-  function middleware(req) {
+export const proxy = withAuth(
+  function proxy(req) {
     const token = req.nextauth.token;
     const isAdmin = req.nextUrl.pathname.startsWith("/admin");
 
