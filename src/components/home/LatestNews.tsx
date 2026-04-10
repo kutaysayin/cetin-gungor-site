@@ -1,5 +1,5 @@
 import { prisma } from "@/lib/db";
-import type { News } from "../../generated/prisma";
+import type { News } from "../../generated/prisma/client";
 import SectionTitle from "@/components/ui/SectionTitle";
 import NewsCard from "@/components/ui/NewsCard";
 import AnimatedSection from "@/components/ui/AnimatedSection";
