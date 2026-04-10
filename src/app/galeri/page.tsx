@@ -10,6 +10,8 @@ import PageHeader from "@/components/ui/PageHeader";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import { prisma } from "@/lib/db";
 
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: "Foto Galeri | Manisa İnşaat Malzemecileri Derneği",
   description:

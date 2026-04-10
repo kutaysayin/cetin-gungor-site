@@ -2,6 +2,8 @@
 import { prisma } from "@/lib/db";
 import SettingsClient from "./SettingsClient";
 
+export const dynamic = "force-dynamic";
+
 export const metadata = { title: "Site Ayarlari" };
 
 export default async function AdminSettingsPage() {

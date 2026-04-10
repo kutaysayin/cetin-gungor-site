@@ -6,6 +6,8 @@ import SectionTitle from "@/components/ui/SectionTitle";
 import EventsView from "@/components/etkinlikler/EventsView";
 import { prisma } from "@/lib/db";
 
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: "Etkinlikler | MANİMAD",
   description: "Dernek etkinlikleri ve sektör buluşmaları",

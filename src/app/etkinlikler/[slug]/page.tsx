@@ -19,6 +19,8 @@ import SectionTitle from "@/components/ui/SectionTitle";
 import EventRegisterButton from "@/components/etkinlikler/EventRegisterButton";
 import { prisma } from "@/lib/db";
 
+export const dynamic = "force-dynamic";
+
 const TURKCE_AYLAR = [
   "Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran",
   "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık",

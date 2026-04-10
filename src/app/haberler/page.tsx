@@ -20,6 +20,8 @@ import NewsCard from "@/components/ui/NewsCard";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import { prisma } from "@/lib/db";
 
+export const dynamic = "force-dynamic";
+
 const PER_PAGE = 8;
 
 const kategoriler = [

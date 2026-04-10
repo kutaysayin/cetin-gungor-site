@@ -2,6 +2,8 @@
 import { prisma } from "@/lib/db";
 import MessagesClient from "./MessagesClient";
 
+export const dynamic = "force-dynamic";
+
 export const metadata = { title: "Mesaj Yonetimi" };
 
 export default async function AdminMessagesPage() {

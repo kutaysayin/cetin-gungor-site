@@ -11,6 +11,8 @@ import NewsCard from "@/components/ui/NewsCard";
 import SectionTitle from "@/components/ui/SectionTitle";
 import { prisma } from "@/lib/db";
 
+export const dynamic = "force-dynamic";
+
 // Kategori etiket ve renk eşlemeleri
 const categoryLabelMap: Record<string, string> = {
   SEKTOR: "Sektör Haberleri",

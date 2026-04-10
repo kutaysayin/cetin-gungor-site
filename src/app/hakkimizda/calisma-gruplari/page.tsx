@@ -27,6 +27,8 @@ import SectionTitle from "@/components/ui/SectionTitle";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import { prisma } from "@/lib/db";
 
+export const dynamic = "force-dynamic";
+
 // Sıra numarasına göre ikon atama
 const groupIcons = [BarChart2, BookOpen, Globe, Leaf, Megaphone, ShieldCheck, Users, Wrench];
 

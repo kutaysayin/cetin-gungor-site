@@ -2,6 +2,8 @@
 import { prisma } from "@/lib/db";
 import UsersListClient from "./UsersListClient";
 
+export const dynamic = "force-dynamic";
+
 export const metadata = { title: "Uye Yonetimi" };
 
 export default async function AdminUsersPage() {

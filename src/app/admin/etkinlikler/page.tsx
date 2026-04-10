@@ -3,6 +3,8 @@ import { prisma } from "@/lib/db";
 import Link from "next/link";
 import EventsListClient from "./EventsListClient";
 
+export const dynamic = "force-dynamic";
+
 export const metadata = { title: "Etkinlikler Yonetimi" };
 
 export default async function AdminEventsPage() {

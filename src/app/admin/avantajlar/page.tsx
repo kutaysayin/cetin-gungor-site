@@ -2,6 +2,8 @@
 import { prisma } from "@/lib/db";
 import AdvantagesClient from "./AdvantagesClient";
 
+export const dynamic = "force-dynamic";
+
 export const metadata = { title: "Avantaj Yonetimi" };
 
 export default async function AdminAdvantagesPage() {

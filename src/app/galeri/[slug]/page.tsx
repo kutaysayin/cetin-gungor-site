@@ -10,6 +10,8 @@ import PageHeader from "@/components/ui/PageHeader";
 import GalleryGrid from "@/components/galeri/GalleryGrid";
 import { prisma } from "@/lib/db";
 
+export const dynamic = "force-dynamic";
+
 interface PageProps {
   params: Promise<{ slug: string }>;
 }

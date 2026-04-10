@@ -2,6 +2,8 @@
 import { prisma } from "@/lib/db";
 import BoardClient from "./BoardClient";
 
+export const dynamic = "force-dynamic";
+
 export const metadata = { title: "Yonetim Kurulu Yonetimi" };
 
 export default async function AdminBoardPage() {

@@ -17,6 +17,8 @@ import SectionTitle from "@/components/ui/SectionTitle";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import { prisma } from "@/lib/db";
 
+export const dynamic = "force-dynamic";
+
 function getInitials(name: string): string {
   return name
     .split(" ")

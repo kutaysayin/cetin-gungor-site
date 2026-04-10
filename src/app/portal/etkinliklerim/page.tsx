@@ -10,6 +10,8 @@ import { prisma } from "@/lib/db";
 import EtkinliklerimTabs from "@/components/portal/EtkinliklerimTabs";
 import type { Metadata } from "next";
 
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: "Etkinliklerim | Uye Portali",
 };

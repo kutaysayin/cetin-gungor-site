@@ -2,6 +2,8 @@
 import { prisma } from "@/lib/db";
 import PublicationsClient from "./PublicationsClient";
 
+export const dynamic = "force-dynamic";
+
 export const metadata = { title: "Yayin Yonetimi" };
 
 export default async function AdminPublicationsPage() {

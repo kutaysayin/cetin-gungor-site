@@ -10,6 +10,8 @@ import AvantajTabs from "@/components/avantaj-rehberi/AvantajTabs";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import { prisma } from "@/lib/db";
 
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: "Avantaj Rehberi | Manisa İnşaat Malzemecileri Derneği",
   description:

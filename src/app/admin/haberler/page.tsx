@@ -3,6 +3,8 @@ import { prisma } from "@/lib/db";
 import Link from "next/link";
 import NewsListClient from "./NewsListClient";
 
+export const dynamic = "force-dynamic";
+
 export const metadata = { title: "Haberler Yonetimi" };
 
 export default async function AdminNewsPage() {

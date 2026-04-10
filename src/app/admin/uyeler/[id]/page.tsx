@@ -3,6 +3,8 @@ import { prisma } from "@/lib/db";
 import { notFound } from "next/navigation";
 import UserEditForm from "./UserEditForm";
 
+export const dynamic = "force-dynamic";
+
 export const metadata = { title: "Uye Duzenleme" };
 
 export default async function AdminUserDetailPage({

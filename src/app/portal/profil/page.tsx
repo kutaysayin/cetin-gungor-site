@@ -10,6 +10,8 @@ import { prisma } from "@/lib/db";
 import ProfilForm from "@/components/portal/ProfilForm";
 import type { Metadata } from "next";
 
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: "Profilim | Uye Portali",
 };

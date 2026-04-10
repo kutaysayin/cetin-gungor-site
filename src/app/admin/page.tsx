@@ -12,6 +12,8 @@ import {
   Clock,
 } from "lucide-react";
 
+export const dynamic = "force-dynamic";
+
 /* ────────── Helpers ────────── */
 
 function formatDate(date: Date): string {

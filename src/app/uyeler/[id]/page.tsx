@@ -8,6 +8,8 @@ import Badge from "@/components/ui/Badge";
 import MemberCard from "@/components/ui/MemberCard";
 import { prisma } from "@/lib/db";
 
+export const dynamic = "force-dynamic";
+
 type Props = {
   params: Promise<{ id: string }>;
 };

@@ -23,6 +23,8 @@ import {
 import Badge from "@/components/ui/Badge";
 import Button from "@/components/ui/Button";
 
+export const dynamic = "force-dynamic";
+
 function formatDate(date: Date | string): string {
   const d = typeof date === "string" ? new Date(date) : date;
   return d.toLocaleDateString("tr-TR", {

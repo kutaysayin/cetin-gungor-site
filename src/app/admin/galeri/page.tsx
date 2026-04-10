@@ -2,6 +2,8 @@
 import { prisma } from "@/lib/db";
 import GalleryClient from "./GalleryClient";
 
+export const dynamic = "force-dynamic";
+
 export const metadata = { title: "Galeri Yonetimi" };
 
 export default async function AdminGalleryPage() {

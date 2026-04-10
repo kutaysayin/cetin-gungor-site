@@ -11,6 +11,8 @@ import MemberSearch from "@/components/uyeler/MemberSearch";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import { prisma } from "@/lib/db";
 
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: "Uyelerimiz | MANİMAD",
   description: "Dernek üyesi firma ve işletmeler",

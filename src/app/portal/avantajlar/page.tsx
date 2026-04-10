@@ -12,6 +12,8 @@ import { Building2, Tag, Phone, Mail, Gift, ExternalLink } from "lucide-react";
 import Badge from "@/components/ui/Badge";
 import Button from "@/components/ui/Button";
 
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: "Avantajlarim",
 };
