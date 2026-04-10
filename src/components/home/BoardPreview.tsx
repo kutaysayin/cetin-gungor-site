@@ -1,5 +1,5 @@
 import { prisma } from "@/lib/db";
-import type { BoardMember as PrismaBoardMember } from "@/generated/prisma";
+import type { BoardMember as PrismaBoardMember } from "../../generated/prisma";
 import SectionTitle from "@/components/ui/SectionTitle";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 

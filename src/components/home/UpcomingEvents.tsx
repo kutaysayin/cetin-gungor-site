@@ -1,5 +1,5 @@
 import { prisma } from "@/lib/db";
-import type { Event } from "@/generated/prisma";
+import type { Event } from "../../generated/prisma";
 import SectionTitle from "@/components/ui/SectionTitle";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import { MapPin, CalendarX } from "lucide-react";
